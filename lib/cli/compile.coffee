@@ -19,5 +19,5 @@ module.exports = (cli, args) ->
   if args.verbose then cli.emit('data', '')
 
   project.compile()
-    .then -> cli.emit('data', 'done!'.green)
+    .then -> cli.emit('data', 'done!'.green); process.exit()
     .catch (err) -> cli.emit('err_exit', err); throw err
