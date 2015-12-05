@@ -103,7 +103,7 @@ class CLI extends EventEmitter
     s.addArgument ['path'],
       help: "Path to initialize your project at"
 
-    s.addArgument ['--template', '-t'],
+    s.addArgument ['--template', '--tpl', '-t'],
       help: "The template to use for your project"
 
     s.addArgument ['--overrides', '-o'],
@@ -177,7 +177,6 @@ class CLI extends EventEmitter
       help: 'Add a new template for future use'
 
     s.addArgument ['name'],
-      nargs: '?'
       help: "What you'd like to name the template"
 
     s.addArgument ['uri'],
